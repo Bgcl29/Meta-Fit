@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MetaFit</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>MetaFit</h1>
+<p>Entrenamiento inteligente</p>
+
+</header>
+
+<div class="container">
+
+<section id="login">
+
+<h2>Iniciar sesión</h2>
+
+<input id="loginEmail" placeholder="Correo">
+<input id="loginPass" type="password" placeholder="Contraseña">
+
+<button onclick="login()">Entrar</button>
+<button onclick="showRegister()">Crear cuenta</button>
+
+</section>
+
+<section id="register" class="hidden">
+
+<h2>Registro</h2>
+
+<input id="name" placeholder="Nombre completo">
+<input id="email" placeholder="Correo">
+<input id="pass" type="password" placeholder="Contraseña">
+
+<input id="age" placeholder="Edad">
+<input id="weight" placeholder="Peso (kg)">
+<input id="height" placeholder="Altura (cm)">
+
+<button onclick="register()">Registrarse</button>
+
+</section>
+
+<section id="dashboard" class="hidden">
+
+<h2>Panel</h2>
+
+<p id="imc"></p>
+
+<div class="menu">
+
+<div class="card" onclick="openObjetivo()">
+<i class="fa-solid fa-bullseye"></i>
+Objetivo
+</div>
+
+<div class="card" onclick="openRutina()">
+<i class="fa-solid fa-dumbbell"></i>
+Rutina
+</div>
+
+<div class="card" onclick="openDieta()">
+<i class="fa-solid fa-apple-whole"></i>
+Dieta
+</div>
+
+<div class="card" onclick="openSalud()">
+<i class="fa-solid fa-heart-pulse"></i>
+Salud
+</div>
+
+</div>
+
+</section>
+
+<section id="rutina" class="hidden">
+
+<h2>Rutina semanal</h2>
+
+<div id="rutinaContent"></div>
+
+</section>
+
+<section id="dieta" class="hidden">
+
+<h2>Plan alimenticio</h2>
+
+<div id="dietaContent"></div>
+
+</section>
+
+<section id="salud" class="hidden">
+
+<h2>Prevención</h2>
+
+<div id="saludContent"></div>
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+<script src="modules/rutina.js"></script>
+<script src="modules/dieta.js"></script>
+<script src="modules/salud.js"></script>
+
+</body>
+</html>
